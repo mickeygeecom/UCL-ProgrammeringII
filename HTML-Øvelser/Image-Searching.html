@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            font-size: 1.1em;
+        }
+        span.deleteicon {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+        }
+        span.deleteicon span {
+            position: absolute;
+            display: block;
+            right: 3px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            color: #fff;
+            background-color: rgb(232, 12, 12);
+            font: 13px monospace;
+            text-align: center;
+            line-height: 1em;
+            cursor: pointer;
+        }
+        span.deleteicon input {
+            padding-right: 18px;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <script type="text/javascript">
+            let date = new Date().toLocaleDateString();
+            document.getElementById("dateForm").value = date;
+            console.log("date: " + date)
+    </script>
+</head>
+
+<body>
+    <h1>Exercise 2: Image Searching Website</h1>
+
+    <hr>
+    
+    Search your Image here: <span class="deleteicon">
+        <input type="text" value="Kung fu Panda">
+        <span onclick="var input = this.previousElementSibling; input.value = ''; input.focus();">x</span>
+    </span> <input type="button" value="Search">
+    <br/>
+    <img src="https://c8.alamy.com/comp/PM3DEE/kung-fu-panda-po-2008-dream-works-PM3DEE.jpg" width="400px" height="400px">
+    <a href="#someweirdasslink" target="_blank"><p>For more info click here</p></a>
+    <hr>
+    Feedback Form:
+    <form>
+        Name:
+        <input type="text">
+        <br/>
+        Date:
+        <input id="dateForm" type="text" value="">
+        <br/>
+        Comment:<br/>
+        <textarea style="height:200px;width:400px">
+        </textarea>
+        <br/>
+        <input type="button" value="Submit">
+
+    </form>
+</body>
+
+</html>
